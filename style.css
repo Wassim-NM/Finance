@@ -11,8 +11,13 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    background-color: #f4f4f4;
     color: #333;
+    background-color: #121212;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
 }
 
 header {
@@ -62,6 +67,17 @@ div.logo {
     height: 100px;
     border: none;
     border-radius: 50%;
+}
+
+h1 {
+    scroll-margin-top: 60px; 
+    margin: 150px 0 20px 0; 
+    text-align: center;
+
+}
+
+h1 span {
+    color: gold;
 }
 
 section {
@@ -115,4 +131,43 @@ footer {
     position: relative;
     bottom: 0;
     width: 100%;
+}
+ 
+.container {
+    display: flex;
+    width: 90%;
+    max-width: 1200px;
+    justify-content: space-between;
+}
+.chart, .order-book, .trade-panel {
+    background: #1e1e1e;
+    padding: 20px;
+}
+.chart {
+    flex: 2;
+    height: 400px;
+    border-radius: 10px 0 0 10px;
+}
+.order-book {
+    flex: 1;
+    height: 400px;
+    overflow-y: auto;
+    border-radius: 0 10px 10px 0;
+}
+.trade-panel {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.buy, .sell {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+}
+.buy {
+    background: #00c853;
+}
+.sell {
+    background: #d50000;
 }
