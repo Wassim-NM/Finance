@@ -6,35 +6,17 @@
 
 /* General Styles */
 
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    color: #333;
-    background-color: #121212;
-    color: #fff;
+nav {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    padding: 20px;
-}
-
-header {
+    gap: 40px;
+    top: 0;
     background-color: #333;
     color: #fff;
     padding: 1rem 0;
-    position: fixed;
-    top: 0;
     width: 100%;
-    margin-bottom: 100px;
-}
-
-nav {
-    display: flex;
-    gap: 40px;
-    height: 100%;
-    top: 0;
+    position: fixed;
+    z-index: 100;
 }
 
 nav ul {
@@ -63,24 +45,88 @@ div.logo {
 
 .logo img {
     vertical-align: middle;
-    width: 100px;
-    height: 100px;
+    width: 70px;
+    height: 70px;
     border: none;
     border-radius: 50%;
 }
 
-h1 {
-    scroll-margin-top: 60px; 
-    margin: 150px 0 20px 0; 
-    text-align: center;
-
-}
-
-h1 span {
-    color: gold;
+main {
+    background-color: #041226;
+    color: #fff;
 }
 
 section {
+    margin-top: 100px;
+    position: relative;
+    height: 100vh;
+    width: 100%;
+}
+
+h1 {
+    padding: 20px 0; 
+    text-align: center;
+}
+
+span.gold {
+    color: gold;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.info {
+    color: #fff;
+    margin: 10px;
+}
+
+.register-holder {
+    display: grid;
+    grid-template-columns: auto;
+    background-color: white;
+    margin: 10px;
+    padding: 20px;
+    gap: 20px;
+    width: 400px;
+    height: 300px;
+    border: 1.5px solid gold;
+    border-radius: 20px;
+}
+
+div.register {
+    display: grid;
+    grid-template-columns: auto;
+    align-items: center;
+    padding: 5px;
+}
+
+.register input ::placeholder {
+    color: #fff;
+} 
+
+.register input {
+    background-color: #041226;
+    color: #fff;
+    border: 1px solid gold;
+    border-radius: 25px;
+    padding: 7px;
+    width: auto;
+}
+
+.fun-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.fun-btn input {
+    width: 70px;
+}
+
+/* section {
     scroll-margin-top: 140px;
     padding: 2rem;
     margin: 1rem auto;
@@ -121,19 +167,9 @@ form button {
 
 form button:hover {
     background-color: #555;
-}
-
-footer {
-    text-align: center;
-    padding: 1rem 0;
-    background-color: #333;
-    color: #fff;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
+} */
  
-.container {
+/* .container {
     display: flex;
     width: 90%;
     max-width: 1200px;
@@ -170,4 +206,14 @@ footer {
 }
 .sell {
     background: #d50000;
+} */
+
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #333;
+    color: #fff;
+    position: fixed; 
+    bottom: 0;
+    width: 100vw;
 }
