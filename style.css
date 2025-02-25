@@ -1,10 +1,25 @@
+/* General Styles */
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-/* General Styles */
+main {
+    background-color: #041226;
+    color: #fff;
+}
+
+section {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+}
+
+/* Home Style */
+
+/* Header Style */
 
 nav {
     display: flex;
@@ -51,12 +66,9 @@ div.logo {
     border-radius: 50%;
 }
 
-main {
-    background-color: #041226;
-    color: #fff;
-}
+/* Hero Section Style */
 
-section {
+section.hero {
     margin-top: 100px;
     position: relative;
     height: 100vh;
@@ -80,26 +92,36 @@ span.gold {
 
 .info {
     color: #fff;
-    margin: 10px;
+    margin: 10px 0px 10px 30px;
+    font-size: 100px;
 }
 
 .register-holder {
     display: grid;
     grid-template-columns: auto;
     background-color: white;
-    margin: 10px;
+    color: whitesmoke;
+    margin: 10px 30px 10px 0;
     padding: 20px;
     gap: 20px;
     width: 400px;
-    height: 300px;
+    height: auto;
     border: 1.5px solid gold;
     border-radius: 20px;
+}
+
+h2 {
+    color: #111;
+    text-align: center;
+    font-size: 30px;
 }
 
 div.register {
     display: grid;
     grid-template-columns: auto;
     align-items: center;
+    justify-content: center;
+    gap: 5px;
     padding: 5px;
 }
 
@@ -107,13 +129,13 @@ div.register {
     color: #fff;
 } 
 
-.register input {
-    background-color: #041226;
+.register input:not([type="submit"],[type="reset"]) {
+    background-color: #333;
     color: #fff;
     border: 1px solid gold;
     border-radius: 25px;
-    padding: 7px;
-    width: auto;
+    padding: 7px 14px;
+    width: 300px;
 }
 
 .fun-btn {
@@ -123,8 +145,102 @@ div.register {
 }
 
 .fun-btn input {
-    width: 70px;
+    border: 1px solid gold;
+    border-radius: 25px;
+    padding: 10px;
+    color: #fff;
+    width: 71px;
 }
+
+.fun-btn input:is([type="submit"]){
+    background-color: gold;
+    color: #041226;
+}
+
+.fun-btn input:is([type="submit"]):hover {
+    background-color: lawngreen;
+    color: #fff;
+}
+
+.fun-btn input:is([type="reset"]){
+    background-color: #041226;
+    color: gold;
+}
+
+/* Carosel Style */
+
+.carosel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+.carousel-holder {
+    position: relative;
+    width: 600px;
+    max-width: 90%;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .slide {
+    min-width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .slide img {
+    width: 100%;
+    display: block;
+  }
+  
+  .prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+    z-index: 10;
+  }
+  
+  .prev {
+    left: 10px;
+  }
+  
+  .next {
+    right: 10px;
+  }
+  
+  .indicators {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+  }
+  
+  .indicator {
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .indicator.active {
+    background-color: white;
+  }
 
 /* section {
     scroll-margin-top: 140px;
@@ -213,7 +329,7 @@ footer {
     padding: 1rem 0;
     background-color: #333;
     color: #fff;
-    position: fixed; 
+    position: relative; 
     bottom: 0;
-    width: 100vw;
+    width: 100%;
 }
