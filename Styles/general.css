@@ -1,0 +1,89 @@
+/* General Styles */
+
+:root {
+    --bg-color: #041226;
+    --text-color: #fff;
+    --bright-color: #f3f3f3;
+    --darck-color: #111;
+    --primary-color: #333;
+    --secondary-color: #555;
+    --accent-color: gold;
+    --danger-color: #d50000;
+    --success-color: #00c853;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+section {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+}
+
+/* Header Style */
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    top: 0;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding: 1rem 0;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+div.logo {
+    padding: 0 10px;
+}
+
+.logo img {
+    vertical-align: middle;
+    width: 60px;
+    height: 60px;
+    border: none;
+    border-radius: 50%;
+}
+
+/* Footer Style */
+
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    position: relative; 
+    bottom: 0;
+    width: 100%;
+}

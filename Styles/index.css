@@ -1,75 +1,7 @@
-/* General Styles */
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-main {
-    background-color: #041226;
-    color: #fff;
-}
-
-section {
-    position: relative;
-    height: 100vh;
-    width: 100%;
-}
-
-/* Home Style */
-
-/* Header Style */
-
-nav {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-    top: 0;
-    background-color: #333;
-    color: #fff;
-    padding: 1rem 0;
-    width: 100%;
-    position: fixed;
-    z-index: 100;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-nav ul li a:hover {
-    text-decoration: underline;
-}
-
-div.logo {
-    padding: 0 10px;
-}
-
-.logo img {
-    vertical-align: middle;
-    width: 70px;
-    height: 70px;
-    border: none;
-    border-radius: 50%;
-}
-
 /* Hero Section Style */
 
 section.hero {
-    margin-top: 100px;
+    margin-top: 90px;
     position: relative;
     height: 100vh;
     width: 100%;
@@ -81,8 +13,14 @@ h1 {
 }
 
 span.gold {
-    color: gold;
+    color: var(--accent-color);
 }
+
+.hide {
+    display: none;
+}
+
+/* New Costumer */
 
 .container {
     display: flex;
@@ -91,27 +29,30 @@ span.gold {
 }
 
 .info {
-    color: #fff;
+    color: var(--text-color);
     margin: 10px 0px 10px 30px;
     font-size: 100px;
+}
+
+.register-container {
+    margin: 10px 30px 10px 0;
 }
 
 .register-holder {
     display: grid;
     grid-template-columns: auto;
-    background-color: white;
-    color: whitesmoke;
-    margin: 10px 30px 10px 0;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
     padding: 20px;
     gap: 20px;
     width: 400px;
-    height: auto;
-    border: 1.5px solid gold;
+    height: 380px;
+    border: 1.5px solid var(--accent-color);
     border-radius: 20px;
 }
 
 h2 {
-    color: #111;
+    color: var(--darck-color);
     text-align: center;
     font-size: 30px;
 }
@@ -126,13 +67,13 @@ div.register {
 }
 
 .register input ::placeholder {
-    color: #fff;
+    color: var(--text-color);
 } 
 
 .register input:not([type="submit"],[type="reset"]) {
-    background-color: #333;
-    color: #fff;
-    border: 1px solid gold;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border: 1px solid var(--accent-color);
     border-radius: 25px;
     padding: 7px 14px;
     width: 300px;
@@ -145,26 +86,63 @@ div.register {
 }
 
 .fun-btn input {
-    border: 1px solid gold;
+    border: 1px solid var(--accent-color);
     border-radius: 25px;
     padding: 10px;
-    color: #fff;
+    color: var(--text-color);
     width: 71px;
 }
 
 .fun-btn input:is([type="submit"]){
-    background-color: gold;
-    color: #041226;
+    background-color: var(--accent-color);
+    color: var(--bg-color);
 }
 
 .fun-btn input:is([type="submit"]):hover {
-    background-color: lawngreen;
-    color: #fff;
+    background-color: var(--success-color);
+    color: var(--text-color);
+    border: 1px solid var(--darck-color);
+    transition: 0.5s ease-in-out;
 }
 
 .fun-btn input:is([type="reset"]){
-    background-color: #041226;
-    color: gold;
+    background-color: var(--bg-color);
+    color: var(--accent-color);
+}
+
+.fun-btn input:is([type="reset"]):hover {
+    background-color: var(--danger-color);
+    color: var(--text-color);
+    border: 1px solid var(--darck-color);
+    transition: 0.5s ease-in-out;
+}
+
+/* Old Costumer */
+
+.welcome-back {
+    font-size: 70px;
+}
+
+.fav-chart-container {
+    margin: 10px 30px 10px 0;
+    background-color: var(--bright-color);
+    color: var(--darck-color);
+    border-radius: 20px;
+    padding: 2px;
+}
+
+.chart-holder {
+    display: grid;
+    grid-template-columns: auto;
+    background-color: var(--darck-color);
+    color: whitesmoke;
+    padding: 20px;
+    gap: 20px;
+    width: 400px;
+    height: 380px;
+    border: 1.5px solid var(--bright-color);
+    border-radius: 20px;
+
 }
 
 /* Carosel Style */
@@ -178,26 +156,32 @@ div.register {
 
 .carousel-holder {
     position: relative;
-    width: 600px;
-    max-width: 90%;
+    width: 90%;
+    height: 50%;
     overflow: hidden;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    background-color: var(--darck-color);
   }
   
   .slides {
     display: flex;
     transition: transform 0.5s ease-in-out;
+    background-color: var(--accent-color);
+    border-radius: 10px;
   }
   
   .slide {
     min-width: 100%;
-    box-sizing: border-box;
+    padding: 1px;
   }
   
   .slide img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
     display: block;
+    border-radius: 10px;
   }
   
   .prev, .next {
@@ -205,7 +189,7 @@ div.register {
     top: 50%;
     transform: translateY(-50%);
     background-color: rgba(0, 0, 0, 0.5);
-    color: white;
+    color: var(--bright-color);
     border: none;
     cursor: pointer;
     padding: 10px;
@@ -239,7 +223,7 @@ div.register {
   }
   
   .indicator.active {
-    background-color: white;
+    background-color: var(--bright-color);
   }
 
 /* section {
@@ -323,13 +307,3 @@ form button:hover {
 .sell {
     background: #d50000;
 } */
-
-footer {
-    text-align: center;
-    padding: 1rem 0;
-    background-color: #333;
-    color: #fff;
-    position: relative; 
-    bottom: 0;
-    width: 100%;
-}

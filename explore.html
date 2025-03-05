@@ -1,11 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Crypto Ratings & Charts</title>
+        <link rel="stylesheet" href="Styles/general.css">
+        <link rel="stylesheet" href="Styles/explore.css">
+    </head>
+
+    <body>
+        <!-- Header Section -->
+        <header>
+            <nav>
+                <div class="logo"><img src="Assets/FinancePro.png" alt="Logo"></div>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="explore.html">Explore</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="support.html">Support</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- Main Content -->
+        <main>
+            <div class="container">
+                
+
+                <!-- Crypto Ratings Section -->
+                <section class="crypto-ratings">
+                    <div class="table-container">
+                        <h2>Top Cryptocurrency Ratings</h2>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Rank</th>
+                                    <th>Name</th>
+                                    <th>Symbol</th>
+                                    <th>Price (USD)</th>
+                                    <th>Market Cap</th>
+                                    <th>Rating</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Bitcoin</td>
+                                    <td>BTC</td>
+                                    <td>$30,000</td>
+                                    <td>$570B</td>
+                                    <td>⭐⭐⭐⭐⭐</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Ethereum</td>
+                                    <td>ETH</td>
+                                    <td>$2,000</td>
+                                    <td>$230B</td>
+                                    <td>⭐⭐⭐⭐☆</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Binance Coin</td>
+                                    <td>BNB</td>
+                                    <td>$300</td>
+                                    <td>$50B</td>
+                                    <td>⭐⭐⭐☆☆</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+                <!-- Crypto Chart Section -->
+                <section class="chart-price">
+                    <h2>Price Chart</h2>
+                    <canvas id="cryptoChart"></canvas>
+                </section>
+            </div>
+        </main>
+        <!-- Footer Section -->
+        <footer>
+            <p>&copy; 2025 FinancePro Website. All rights reserved.</p>
+        </footer>
+        <!-- Script for Chart Visualization -->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <!-- General Scripts -->
+        <script src="Scripts/explore.js"></script>
+    </body>
+
 </html>

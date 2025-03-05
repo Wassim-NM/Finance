@@ -5,7 +5,8 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Crypto Trading UI</title>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="Styles/general.css">
+        <link rel="stylesheet" href="Styles/index.css">
     </head>
 
     <body>
@@ -21,29 +22,50 @@
             </nav>
         </header>
         <main>
+
             <!-- Hero section -->
             <section class="hero">
-                <h1>Welcome to <b>F</b>inance<span class="gold">P</span>ro</h1>
+                <h1 class="welcome">Welcome to <b>F</b>inance<span class="gold">P</span>ro</h1>
                 <div class="container">
-                    <div class="info new">
+
+                    <!-- User  -->
+                    <div class="info hide" id="oldUser">
+                        <p><span class="welcome-back">Welcome back</span></p>
+                        <span class="gold" id="dis-name"></span>
+                    </div>
+
+                    <!-- Registration Introduction -->
+                    <div class="info" id="newUser">
                         <p>New On Cripto</p>
                         <span class="gold">S</span>tart Now
                     </div>
+
+                    <!-- Favorite Chart -->
+                     <div class="fav-chart-container hide">
+                        <h1>Favorite <span class="gold">C</span>art</h1>
+                        <div class="chart-holder">
+                            <div class="fav-chart">
+                                <div class="chart-cell"></div><hr>
+                            </div>
+                        </div>
+                     </div>
                     <!-- Register Form -->
-                    <div class="register-holder">
-                        <h2>Join <span class="gold">U</span>s</h2>
-                        <div class="register">
-                            <input type="text" name="Fname" class="name" placeholder="First Name">
-                            <input type="text" name="Lname" class="name" placeholder="Last Name">
-                            <input type="number" name="age" placeholder="Age">
-                            <input type="email" name="account" id="email" placeholder="Enter your emai">
-                            <input type="password" name="password" class="password" placeholder="Create password">
-                            <input type="password" name="Comfirm Password" class="password"
-                                placeholder="Confirm password">
-                            <!-- Function Button -->
-                            <div class="fun-btn">
-                                <input type="submit" value="Register">
-                                <input type="reset" value="Clear">
+                    <div class="register-container">
+                        <div class="register-holder">
+                            <h2>Join <span class="gold">U</span>s</h2>
+                            <div class="register">
+                                <input type="text" id="Fname"  placeholder="First Name" required>
+                                <input type="text" id="Lname"  placeholder="Last Name" required>
+                                <input type="number" id="age" placeholder="Age" required>
+                                <input type="email" id="account" placeholder="Enter your email" required>
+                                <input type="password" id="password" placeholder="Create password" required>
+                                <input type="password" id="con-Password"
+                                    placeholder="Confirm password" required>
+                                <!-- Function Button -->
+                                <div class="fun-btn">
+                                    <input type="submit" id="submit" value="Register">
+                                    <input type="reset" id="reset" value="Clear">
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -53,9 +75,9 @@
                 <div class="carousel-holder">
                     <!-- Slides -->
                     <div class="slides">
-                        <div class="slide"><img src="image1.jpg" alt="Image 1"></div>
-                        <div class="slide"><img src="image2.jpg" alt="Image 2"></div>
-                        <div class="slide"><img src="image3.jpg" alt="Image 3"></div>
+                        <div class="slide"><img src="Assets/Dark-crypto-coins.png" alt="Image 1"></div>
+                        <div class="slide"><img src="" alt="Image 2"></div>
+                        <div class="slide"><img src="" alt="Image 3"></div>
                     </div>
                     <!-- Navigation Buttons -->
                     <button class="prev" onclick="moveSlide(-1)">❮</button>
@@ -77,10 +99,7 @@
             <div class="buy">Buy BTC</div>
             <div class="sell">Sell BTC</div>
         </div> -->
-        <script src="index.js" defer></script>
+        <script src="Scripts/index.js" defer></script>
     </body>
-    <footer>
-        <p>&copy; 2025 FinancePro Website. All rights reserved.</p>
-    </footer>
 
 </html>
