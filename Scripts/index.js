@@ -97,27 +97,6 @@ function updateCarousel() {
 
 updateCarousel();
 
-// APIs & Calls
-
-const API_BASE_URLS = {
-    AlphaVantage: "https://www.alphavantage.co/query?",
-    Binance: "https://api.binance.com/api/v3/",
-    CoinCap: "https://api.coincap.io/v2/assets",
-    CoinGecko: "https://api.coingecko.com/api/v3/",
-    CoinMarketCap: "https://pro-api.coinmarketcap.com/v1/",
-    CryptoCompare: "GET https://min-api.cryptocompare.com/data/",
-    Kraken: "https://api.kraken.com/0/public/"
-};
-
-const ApiKeys = {
-    AlphaVantageKey: "N1B5BHY0SFWUTCU8",
-    // BinanceKey: , //No API Key Are Requierd
-    CoinCapKey: "21b919f5-ac64-491f-86bc-ea2a83692162",
-    CoinGeckoKey: "CG-5anBuXGszef4URj7vpqhX3WX",
-    CoinMarketCapKey: "f3592c62-6838-4185-9381-02b6de69e31f",
-    CryptoCompareKey: "68b80e40cee422da411e7e602a225ae15d3e7cebae5f5f310be2776e4756af1c"
-    // KrakenKey: , // No API Key Are Requierd
-}
 
 // Fetch API Keys
 let cryptRating = {
